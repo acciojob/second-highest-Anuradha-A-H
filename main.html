@@ -10,22 +10,8 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
-			f = -Infinity;
-			s = -Infinity;
-			for( let a of arr)
-				{
-					if(a>f)
-					{
-						s = f;
-						f = a
-					
-					}
-					else if (a<f && a>s)
-					{
-						s = a;
-					}
-				}
-			return s;
+			let uq = [...new Set(arr)].sort((a,b)=>b-a);
+			return uq[1];
 			
 		}
 
